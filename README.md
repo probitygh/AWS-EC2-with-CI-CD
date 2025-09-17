@@ -20,7 +20,7 @@ Name it something like: `EC2-CodeDeploy-Role`
 
 This role will be attached to your EC2 instance.
 
-
+![](img/EC2-CodeDeploy-Role.png)
 
 
 CodeDeploy Service Role
@@ -32,7 +32,7 @@ Select AWS service → CodeDeploy
 Attach: `AWSCodeDeployRole`
 
 Name it something like: `CodeDeployServiceRole.`
-
+![](img/CodeDeployServiceRole.png)
 
 - Step two: Launch and Configure EC2
 
@@ -57,6 +57,7 @@ sudo pip install awscli
 
 `Add the EC2 Codedeploy IAM role during EC2 configuration.`
 
+![](img/EC2.png)
 
  - Step 3: Create a CodeDeploy Application & Deployment Group
 
@@ -66,7 +67,7 @@ Name: `MyWebApp`
 
 Compute platform: EC2/On-premises.
 
-![](img/Codedeploy%20app.png)
+![](img/MyWebApp%20Codedeploy.png)
 
 Create a Deployment Group:
 
@@ -80,7 +81,7 @@ Deployment type: In-place.
 
 Choose AppSpec file (already included in this repo).
 
-![](img/deployment%20group.png)
+![](img/Depoyment%20Groups.png)
 
 
 
@@ -92,7 +93,7 @@ Pipeline name: `MyWebAppPipeline.`
 
 Category: Build Custom Pipeline
 
-![](img/pipeline.png)
+![](img/Custom%20pipeline.png)
 
 Add Source Stage
 
@@ -111,10 +112,23 @@ Application name: MyWebApp.
 Deployment group: MyWebApp-DeploymentGroup.
 
 
-![](img/pipeline%20created.png)
+![](img/PIPELINE%20CREATED.png)
 
-![](img/execution.png)
+![](img/WORKING%20PIPELINE.png)
 
 
 
 `Once created, the pipeline will automatically run whenever you push changes to the GitHub repository.`
+
+
+![](img/WEB%20PAGE.png)
+
+
+After setting up the pipeline, the workflow looks like this when code changes is made:
+
+ **Make Code Changes**  
+   Update your application code locally. For example, edit your `index.html` file. 
+
+   Within a few moments, your updated code is deployed and visible when you refresh the application in the browser.
+
+   ![](img/CODE%20CHANGES.png)
