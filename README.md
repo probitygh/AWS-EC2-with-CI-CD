@@ -34,7 +34,7 @@ Attach: `AWSCodeDeployRole`
 Name it something like: `CodeDeployServiceRole.`
 ![](img/CodeDeployServiceRole.png)
 
-- Step two: Launch and Configure EC2
+- Step two: Launch and Configure EC2 Instance
 
 AMI- Amazon Linux
 
@@ -61,7 +61,7 @@ sudo pip install awscli
 
  - Step 3: Create a CodeDeploy Application & Deployment Group
 
-Navigate to AWS CodeDeploy → Applications → Create application.
+Navigate to AWS CodeDeploy Console → Applications → Create application.
 
 Name: `MyWebApp`
 
